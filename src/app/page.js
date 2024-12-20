@@ -62,6 +62,7 @@ const ProductsPage = () => {
   // Função de busca
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
+    setCurrentPage(1);  // Reinicia a página para a primeira quando a busca mudar
   };
 
   // Função de ordenação
