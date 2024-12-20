@@ -167,32 +167,33 @@ const ProductsPage = () => {
       {/* Navegação de Paginação */}
       
       <div className="pagination flex justify-center gap-4 mt-4">
-        <a
-          onClick={handlePreviousPage}
-          className={`p-2 px-4 rounded-md border ${currentPage === 1 ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-white text-blue-500'}`}
-          disabled={currentPage === 1}
-        >
-          Anterior
-        </a>
+  <a
+    onClick={handlePreviousPage}
+    className={`p-2 px-4 rounded-md border ${currentPage === 1 ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-white text-blue-500'}`}
+    disabled={currentPage === 1}
+  >
+    Anterior
+  </a>
 
-        {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
-          <a
-            key={pageNumber}
-            onClick={() => handlePageChange(pageNumber)}
-            className={`p-2 px-4 rounded-md border ${currentPage === pageNumber ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
-          >
-            {pageNumber}
-          </a>
-        ))}
+  {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
+    <a
+      key={pageNumber}
+      onClick={() => handlePageChange(pageNumber)}
+      className={`p-2 px-4 rounded-md border ${currentPage === pageNumber ? 'bg-blue-500 text-white active' : 'bg-white text-blue-500'}`}
+    >
+      {pageNumber}
+    </a>
+  ))}
 
-        <a
-          onClick={handleNextPage}
-          className={`p-2 px-4 rounded-md border ${currentPage === totalPages ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-white text-blue-500'}`}
-          disabled={currentPage === totalPages}
-        >
-          Próximo
-        </a>
-      </div>
+  <a
+    onClick={handleNextPage}
+    className={`p-2 px-4 rounded-md border ${currentPage === totalPages ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-white text-blue-500'}`}
+    disabled={currentPage === totalPages}
+  >
+    Próximo
+  </a>
+</div>
+
     </div>
   );
 };
