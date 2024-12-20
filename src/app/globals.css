@@ -1,42 +1,156 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
+/* Estilos gerais */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
   margin: 0;
+  padding-inline: 80px; /* Padding de 10px em toda a página */
+  background-color: #f9fafb; /* Cor de fundo mais suave */
+  color: #333; /* Cor do texto para melhorar o contraste */
+  line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+  
 }
 
-a {
-  color: inherit;
+h1, h2 {
+  font-size: 2rem;
+  font-weight: 600; /* Tornar o título mais forte */
+  color: #2c3e50; /* Cor de título mais escura */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.top{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+input, select, button {
+  padding: 0.75rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Suavizar a transição de todos os elementos */
+  
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  max-width: 400px; /* Tamanho máximo para campos de input */
+}
+
+/* Estilos para input e select com foco */
+input:focus, select:focus {
+  border-color: #3498db; /* Borda azul quando o campo está em foco */
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Efeito de sombra suave no foco */
+}
+
+/* Estilos para botões */
+button {
+  background-color: #4CAF50; /* Cor principal */
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  max-width: 200px; /* Limitar largura do botão */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Cor de fundo no hover */
+  transform: translateY(-2px); /* Pequeno efeito de deslocamento ao passar o mouse */
+}
+
+/* Estilos para os cards de produto */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Layout fluído */
+ 
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+
+
+/* Estilos para a navegação de paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  position:absolute;
+  bottom: 80px;
+  gap: 1rem;
+  cursor: pointer;
+  width: calc(100% - 160px);
+  
+  
+}
+
+.pagination a {
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.25rem;
   text-decoration: none;
+  background-color: #8DAB7F;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.pagination a.active {
+  background-color: #45a049; /* Cor mais escura quando ativo */
+  transform: translateY(-2px); /* Efeito de elevação quando ativo */
+}
+
+.pagination a:hover {
+  background-color: #45a049;
+  transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+.pagination a.disabled {
+  background-color: #bdc3c7;
+  color: #7f8c8d;
+  pointer-events: none; /* Desabilita o clique */
+}
+
+/* Adicionando padding para botões de editar e deletar */
+.product-card button.edit, .product-card button.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  width: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card button.edit:hover, .product-card button.delete:hover {
+  transform: scale(1.1); /* Efeito de zoom no hover */
+}
+
+/* Estilos de ícones de editar e deletar */
+.product-card button.edit {
+  color: #3498db;
+}
+
+.product-card button.delete {
+  color: #e74c3c;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Para dispositivos menores, ajusta a grid de produtos */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .pagination {
+    flex-direction: column; /* Organiza a paginação verticalmente em telas pequenas */
   }
 }

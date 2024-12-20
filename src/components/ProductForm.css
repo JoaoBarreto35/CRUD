@@ -1,0 +1,133 @@
+.product-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #B7CCCC;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .selected-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .category-tag {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+  }
+  
+  .remove-category-btn {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .no-category {
+    color: #999;
+  }
+  
+  .add-category-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .category-list {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .category-item {
+    padding: 5px;
+  }
+  
+  .category-item-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .category-item-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn {
+    background-color: #8DAB7F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 16px;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  label p{
+    width: 100%;
+    margin-block: 0;
+  }
+  textarea{
+    width: 100%;
+    height: 90px;
+  }
+  input{
+    width: 100%;
+  }
+  .cancel-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 40%;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e53935;
+  }
+  .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  

@@ -1,0 +1,72 @@
+.product-card {
+    background-color: #B7CCCC;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave e maior */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+  .product-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse */
+  }
+  
+  .product-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #34495e; /* Cor do título do card */
+  }
+  
+  .product-card p {
+    font-size: 0.875rem;
+    color: #7f8c8d; /* Cor do texto do card */
+    
+    
+  }
+  .product-card h5{
+    font-size: 1rem;
+    color: #34495e;
+  }
+  .product-card button{
+    text-decoration: none;
+    background-color: #e74c3c; /* Cor para o botão de ação */
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 30%;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .product-card button:hover {
+    background-color: #c0392b; /* Cor no hover */
+  }
+  .product-card-tools{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    position: static;
+
+  }
+ .link{
+    text-decoration: none;
+    color: white;
+ }
+ .products-card-valor{
+    font-size: 1.2rem;
+    
+ }
+ .product-sub-title{
+    display: flex;
+    flex-direction: column;
+   
+ }
+ .product-sub-title h5{
+    padding: 0;
+    margin: 0;
+ }

@@ -1,0 +1,119 @@
+.product-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #B7CCCC;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-field input, .form-field textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .image-preview {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .selected-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .category-tag {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+  }
+  
+  .remove-category-btn {
+    margin-left: 8px;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .no-category {
+    color: #999;
+  }
+  
+  .add-category-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .category-list {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .category-item {
+    padding: 5px;
+  }
+  
+  .category-item-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .category-item-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  label{
+    width: 100%;
+    background-color: #0056b3;
+  }
+  
